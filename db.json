@@ -1,0 +1,58 @@
+{
+  "user": {
+    "usuario": "",
+    "password": ""
+  },
+  "cliente": [
+    {
+      "nome": "Manuel Vemba Branda",
+      "data_nasc": "3333-03-12",
+      "telefone": "92799999",
+      "turma": "GB20",
+      "class": "10",
+      "curso": "Informática",
+      "data_matricula": "2023-10-26",
+      "id": 1
+    },
+    {
+      "nome": "Paulo Jamba",
+      "data_nasc": "1998-11-12",
+      "telefone": "945 000 000",
+      "turma": "GB20",
+      "class": "10",
+      "curso": "Telecomunicações",
+      "data_matricula": "2023-10-12",
+      "id": 2
+    },
+    {
+      "nome": "Josemar Teste",
+      "data_nasc": "2013-02-12",
+      "telefone": "92799999",
+      "turma": "GB23",
+      "class": "12",
+      "curso": "Telecomunicações",
+      "data_matricula": "2023-10-10",
+      "id": 3
+    },
+    {
+      "nome": "Martinho tesssss11",
+      "data_nasc": "3333-03-12",
+      "telefone": "92799999",
+      "turma": "GB20",
+      "class": "12",
+      "curso": "Eletrónica",
+      "data_matricula": "2023-10-10",
+      "id": 4
+    },
+    {
+      "nome": "Josemar Josefina",
+      "data_nasc": "2003-10-27",
+      "telefone": "33333333",
+      "turma": "B56",
+      "class": "12",
+      "curso": "Telecomunicações",
+      "data_matricula": "2023-10-10",
+      "id": 5
+    }
+  ]
+}

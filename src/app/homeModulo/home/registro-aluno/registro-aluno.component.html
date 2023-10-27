@@ -1,0 +1,68 @@
+
+<div class="container mg-top">
+  <div class="row">
+      <div class="col-md-4 left-menu">
+          <h5>Bem-Vindo ao Sistema</h5>
+          <ul class="nav flex-column">
+              <li class="nav-item">
+                  <a class="nav-link" routerLink="/aluno_matricula">Alunos Matriculados</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" routerLink="/registro_nota_avaliacao">Registro de Notas e Avaliações</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pagamento Mensais e Outros</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="menuDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="menuDropdown">
+                    <li><a class="dropdown-item" href="#">Item 1</a></li>
+                    <li><a class="dropdown-item" href="#">Item 2</a></li>
+                    <li><a class="dropdown-item" href="#">Item 3</a></li>
+                </ul>
+            </li>
+          </ul>
+      </div>
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-4">
+            <a routerLink="/cadastro"  class="remover-sub">
+              <div class="card cor-card">
+                <div class="card-body ajustar">
+                  <img class="imagens" src="assets/img/alunos.png" alt="">
+                  <h6 class="card-title card-aluno">Cadastrar Novo Aluno</h6>
+                </div>
+              </div>
+            </a>
+
+          </div>
+          <div class="col-md-4">
+            <a routerLink="/pesquisa" class="remover-sub">
+               <div class="card cor-card1">
+              <div class="card-body ajustar">
+                <img class="imagens" src="assets/img/pesquisa.png" alt="">
+                <!-- <input type="text" placeholder="Pesquisa de Aluno"> -->
+                <input type="text" [(ngModel)]="filtroNome" placeholder="Pesquisar por nome">
+
+              </div>
+            </div>
+            </a>
+
+          </div>
+          <div class="col-md-4">
+            <a routerLink="/relatorio" class="remover-sub">
+              <div class="card cor-card2">
+                <div class="card-body ajustar">
+                  <img class="imagens" src="assets/img/relatorio.png" alt="">
+                  <h6 class="card-title card-aluno">Relatório de Alunos</h6>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>

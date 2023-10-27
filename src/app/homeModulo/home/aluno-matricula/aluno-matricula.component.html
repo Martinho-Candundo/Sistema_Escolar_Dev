@@ -1,0 +1,121 @@
+<div class="container mg-topo">
+  <div class="row centro">
+    <h4>ESTUDANTES MATRICULADOS</h4>
+  </div>
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+      <table class="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Data Nascimento</th>
+            <th>Telefone</th>
+            <th>ID</th>
+            <th>Turma/Sala</th>
+            <th>Classe</th>
+            <th>Curso</th>
+            <th>Data Matricula</th>
+            <th>Opções</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cadastro of dadosCadastrado">
+            <td>{{cadastro.nome}}</td>
+            <td>{{cadastro.data_nasc}}</td>
+            <td>{{cadastro.telefone}}</td>
+            <td>{{cadastro.id}}</td>
+            <td>{{cadastro.turma}}</td>
+            <td>{{cadastro.class}}ª</td>
+            <td>{{cadastro.curso}}</td>
+            <td>{{cadastro.data_matricula}}</td>
+            <td>
+              <!-- <input type="button" value="Editar" (click)="atualizarDados()"> -->
+              <button type="button" class="btn btn-primary" 
+              (click)="setValeuForm(cadastro)" data-bs-toggle="modal" data-bs-target="#exampleModal">
+               Editar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+   <!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Editar o Formulário</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="editarForm">
+          <div class="formGroup">
+            <label for="nome" class="lab">Nome:</label>
+            <input type="text" class="form-control" value="nomes" placeholder="Digite o nomes" name="nomes" id="nomes" formControlName="nome">
+            <!-- <span *ngIf="cadastrar.get('nome').errors && (cadastrar.get('nome').dirty || cadastrar.get('nome').touched)">
+              <p class="obrigatorio">Nome Obrigatório</p>
+            </span> -->
+          </div>
+          <div class="formGroup">
+            <label for="email" class="lab">Data Nasc:</label>
+            <input type="date" class="form-control" placeholder="Digite a Data Nascimentos" name="data_nascs" id="data_nasc" formControlName="data_nasc">
+            <!-- <span *ngIf="cadastrar.get('data_nasc').errors && (cadastrar.get('data_nasc').dirty || cadastrar.get('data_nasc').touched)">
+              <p class="obrigatorio">Data Nascimento Obrigatório</p>
+            </span> -->
+          </div>
+          <div class="formGroup">
+            <label for="telefone" class="lab">Telefone:</label>
+            <input type="tel" class="form-control" placeholder="Digite o telefones" name="telefones" id="telefones" formControlName="telefone">
+            <!-- <span *ngIf="cadastrar.get('telefone').errors && (cadastrar.get('telefone').dirty || cadastrar.get('telefone').touched)">
+              <p class="obrigatorio">Telefone Obrigatório</p>
+            </span> -->
+          </div>
+          <div class="formGroup">
+            <label for="nome" class="lab">Turma:</label>
+            <input type="text" class="form-control" placeholder="Digite a turmas" name="turmas" id="turmas" formControlName="turma">
+            <!-- <span *ngIf="cadastrar.get('turma').errors && (cadastrar.get('turma').dirty || cadastrar.get('turma').touched)">
+              <p class="obrigatorio">Turma Obrigatório</p>
+            </span> -->
+          </div>
+          <div class="formGroup">
+            <label for="classe" class="lab">Classe:</label>
+            <input type="text" class="form-control" placeholder="Digite a classes" name="classs" id="classs" formControlName="class">
+            <!-- <span *ngIf="cadastrar.get('class').errors && (cadastrar.get('class').dirty || cadastrar.get('class').touched)">
+              <p class="obrigatorio">Classe Obrigatório</p>
+            </span> -->
+          </div>
+          <div class="formGroup">
+            <label for="periodo" class="lab">Curso:</label>
+            <input type="text" class="form-control" name="cursos" id="cursos" formControlName="curso">
+            <!-- <span *ngIf="cadastrar.get('curso').errors && (cadastrar.get('curso').dirty || cadastrar.get('curso').touched)">
+              <p class="obrigatorio">Curso Obrigatório</p>
+            </span> -->
+          </div>
+          <div class="formGroup">
+            <label for="periodo" class="lab">Data Matrícula:</label>
+            <input type="date" class="form-control" name="data_matriculas" id="data_matriculas" formControlName="data_matricula">
+            <!-- <span *ngIf="cadastrar.get('data_matricula').errors && (cadastrar.get('data_matricula').dirty || cadastrar.get('data_matricula').touched)">
+              <p class="obrigatorio">Data Matrícula Obrigatório</p>
+            </span> -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" (click)="fecharModal()">Salvar</button>
+          </div>
+  
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+   
+    <div class="col-md-1"></div>
+  </div>
+</div>
+
+

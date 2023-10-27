@@ -1,0 +1,31 @@
+
+<div class="container mg-top">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 fundo-img">
+      <section class="top-mg">
+        <form class="form" [formGroup]="meusUser" (ngSubmit)="loginUser()">
+          <div class="formGroup">
+            <label for="">*Nome</label>
+            <input class="form-control"  maxlength="50" type="text" name="nome" placeholder="Digite seu nome" formControlName="nome">
+            <span *ngIf="meusUser.get('nome').errors && (meusUser.get('nome').dirty || meusUser.get('nome').touched)">
+              <p class="erro">Nome obrigatório</p>
+            </span>
+          </div>
+          <div class="formGroup">
+            <label for="">*Senha</label>
+            <input class="form-control" maxlength="50" type="password" name="senha" placeholder="Digite sua senha" formControlName="senha">
+            <span *ngIf="meusUser.get('senha').errors && (meusUser.get('senha').dirty || meusUser.get('senha').touched)">
+              <p class="erro">Senha obrigatório</p>
+            </span>
+          </div>
+          <div class="login">
+            <button class="button text-light bg-danger " type="submit">LOGIN</button>
+          </div>
+
+        </form>
+      </section>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+</div>
