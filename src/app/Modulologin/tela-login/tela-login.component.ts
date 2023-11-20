@@ -10,31 +10,37 @@ import { GeralService } from 'src/app/service/geral.service';
 })
 export class TelaLoginComponent implements OnInit {
   meusUser : FormGroup;
-  nome:string = '';
-  senha:any = '';
+  dadosLogin:any;
 
-  constructor(private fb: FormBuilder, private rotas:Router, private receberApi: GeralService) { }
+  constructor(private fb: FormBuilder, private rotas:Router, private receberApi: GeralService) {
+    this.meusUser = this.fb.group({
+      username:['', Validators.required],
+      senha:['', Validators.required],
+    })
+   }
 
   loginUser(){
-
-    console.log('Testando', this.meusUser.value);
-    this.receberApi.chamarApiUser(this.nome, this.senha).subscribe(()=>{
+   this.receberApi.chamarApiUser().subscribe((resUser) =>{
+    this.dadosLogin = resUser;
+    console.log(this.dadosLogin, 'Resposta');
+    console.log(this.meusUser.value.username, this.meusUser.value.senha)
+    if(this.dadosLogin[0].username === this.meusUser.value.username && this.dadosLogin[0].senha === this.meusUser.value.senha){
+       this.rotas.navigate(['home']);
+       alert('Login com Sucesso!!! Seja bem-vindo!!');
+    }else if(this.dadosLogin[1].username === this.meusUser.value.username && this.dadosLogin[1].senha === this.meusUser.value.senha) {
       this.rotas.navigate(['home']);
-    }, (erro) => {
-      alert('Senha ou Nome errado');
-      console.log(erro);
-    })
+      alert('Login com Sucesso!!! Seja bem-vindo!!');
+      
+    }else{
+      alert('utilizador ou senha errado!!!');
+    }
+   })
 
   }
-  meuGrupoForm(){
-    this.meusUser = this.fb.group({
-      nome:['', Validators.required],
-      senha:['', Validators.required]
-    })
+  bloqueiarBotao():boolean{
+    return this.meusUser.valid;
   }
-
   ngOnInit(): void {
-    this.meuGrupoForm();
   }
 
 }

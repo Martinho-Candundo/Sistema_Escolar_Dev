@@ -1,4 +1,4 @@
-<div class="container-full">
+<div class="container-fluid">
   <div class="row">
     <div class="col-md-12 altura">
 
@@ -9,16 +9,40 @@
       <h1 class="cor"><span >{{ titulo | uppercase }}</span><span class="dta">{{ data | date : 'dd/MM/yyyy HH:mm' }}</span></h1>
     </div>
   </div>
+</div>
+<div class="container">
   <div class="row">
-    <div class="col-md-12">
-      <button class="button bg-sucess" routerLink="home">Home</button>
+    <div class="col-md-2 left-menu">
+      <a routerLink="home">Home</a>
+      <ul class="nav flex-column">
+         <li></li>
+          <li class="nav-item">
+              <a class="nav-link" routerLink="/aluno_matricula">Alunos Matriculados</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" routerLink="/registro_notas">Registro de Notas e Avaliações</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="propina_aluno">Pagamento Mensais e Outros</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="menuDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="menuDropdown">
+                <li><a class="dropdown-item" href="#">Item 1</a></li>
+                <li><a class="dropdown-item" href="#">Item 2</a></li>
+                <li><a class="dropdown-item" href="#">Item 3</a></li>
+            </ul>
+        </li>
+      </ul>
+  </div>
+    <div class="col-md-10">
+      <router-outlet></router-outlet>
     </div>
   </div>
-
 </div>
 
-<div>
-  <router-outlet></router-outlet>
-</div>
+
 
 

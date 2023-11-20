@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 
 import { RegistroAlunoRoutingModule } from './registro-aluno-routing.module';
 
+
 @NgModule({
   declarations: [],
   imports: [

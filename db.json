@@ -1,41 +1,17 @@
 {
-  "user": {
-    "usuario": "",
-    "password": ""
-  },
+  "users": [
+    {
+      "username": "m.candundo",
+      "senha": "candundo"
+    },
+    {
+      "username": "flora",
+      "senha": "1234"
+    }
+  ],
   "cliente": [
     {
-      "nome": "Manuel Vemba Branda",
-      "data_nasc": "3333-03-12",
-      "telefone": "92799999",
-      "turma": "GB20",
-      "class": "10",
-      "curso": "Informática",
-      "data_matricula": "2023-10-26",
-      "id": 1
-    },
-    {
-      "nome": "Paulo Jamba",
-      "data_nasc": "1998-11-12",
-      "telefone": "945 000 000",
-      "turma": "GB20",
-      "class": "10",
-      "curso": "Telecomunicações",
-      "data_matricula": "2023-10-12",
-      "id": 2
-    },
-    {
-      "nome": "Josemar Teste",
-      "data_nasc": "2013-02-12",
-      "telefone": "92799999",
-      "turma": "GB23",
-      "class": "12",
-      "curso": "Telecomunicações",
-      "data_matricula": "2023-10-10",
-      "id": 3
-    },
-    {
-      "nome": "Martinho tesssss11",
+      "nome": "Martinho Candundo",
       "data_nasc": "3333-03-12",
       "telefone": "92799999",
       "turma": "GB20",
@@ -45,14 +21,66 @@
       "id": 4
     },
     {
-      "nome": "Josemar Josefina",
-      "data_nasc": "2003-10-27",
-      "telefone": "33333333",
-      "turma": "B56",
+      "nome": "Kene Líder",
+      "data_nasc": "2002-11-10",
+      "telefone": "922 000 000",
+      "turma": "CI4",
+      "class": "12",
+      "curso": "Informática",
+      "data_matricula": "2023-11-10",
+      "id": 6
+    },
+    {
+      "nome": "Flora Candundo",
+      "data_nasc": "2010-12-10",
+      "telefone": "92799999",
+      "turma": "GB20",
+      "class": "12",
+      "curso": "Electrónica e Telecomunicações",
+      "data_matricula": "2023-11-01",
+      "id": 8
+    },
+    {
+      "nome": "Clesio Santos",
+      "data_nasc": "2010-12-11",
+      "telefone": "92799999",
+      "turma": "GB20",
       "class": "12",
       "curso": "Telecomunicações",
-      "data_matricula": "2023-10-10",
-      "id": 5
+      "data_matricula": "2023-11-11",
+      "id": 9
+    }
+  ],
+  "notas": [
+    {
+      "nome": "martinho",
+      "curso": "Informática",
+      "class": "10",
+      "avalicao_1": "12",
+      "avalicao_2": "12",
+      "exame": "10",
+      "apto": "apto",
+      "id": 6
+    },
+    {
+      "nome": "Flora Mateus",
+      "curso": "Informática",
+      "class": "10",
+      "avalicao_1": "12",
+      "avalicao_2": "13",
+      "exame": "16",
+      "apto": "apto",
+      "id": 7
+    },
+    {
+      "nome": "vb",
+      "curso": "Electrónica e Telecomunicações",
+      "class": "12",
+      "avalicao_1": "12",
+      "avalicao_2": "13",
+      "exame": "5",
+      "apto": "apto",
+      "id": 8
     }
   ]
 }

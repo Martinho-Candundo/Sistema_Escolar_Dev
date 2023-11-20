@@ -1,41 +1,51 @@
-<div class="container mg-topo">
+<div class="mg-topo">
   <div class="row centro">
     <h4>ESTUDANTES MATRICULADOS</h4>
   </div>
   <div class="row">
-    <div class="col-md-1"></div>
-    <div class="col-md-10">
+    
+    <div class="col-md-12">
       <table class="table table-striped table-bordered">
         <thead>
           <tr>
+            <th>ID</th>
             <th>Nome</th>
             <th>Data Nascimento</th>
             <th>Telefone</th>
-            <th>ID</th>
             <th>Turma/Sala</th>
             <th>Classe</th>
             <th>Curso</th>
             <th>Data Matricula</th>
-            <th>Opções</th>
+            <th>Atualizar Dados</th>
+            <th>Apagar Dados</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let cadastro of dadosCadastrado">
+            <td>{{cadastro.id}}</td>
             <td>{{cadastro.nome}}</td>
             <td>{{cadastro.data_nasc}}</td>
             <td>{{cadastro.telefone}}</td>
-            <td>{{cadastro.id}}</td>
             <td>{{cadastro.turma}}</td>
             <td>{{cadastro.class}}ª</td>
             <td>{{cadastro.curso}}</td>
             <td>{{cadastro.data_matricula}}</td>
             <td>
-              <!-- <input type="button" value="Editar" (click)="atualizarDados()"> -->
+              <!-- Botão editar -->
               <button type="button" class="btn btn-primary" 
-              (click)="setValeuForm(cadastro)" data-bs-toggle="modal" data-bs-target="#exampleModal">
-               Editar
+              (click)="setValueForm(cadastro)" data-bs-toggle="modal" data-bs-target="#exampleModal">
+               Atualizar
               </button>
             </td>
+            <td>
+              <!-- Botão editar -->
+              <button type="button" class="btn btn-danger" 
+              (click)="deleteDados(cadastro.id)">
+               Eliminar
+              </button>
+            </td>
+          
+            
           </tr>
         </tbody>
       </table>
@@ -114,8 +124,10 @@
   </div>
 </div>
    
-    <div class="col-md-1"></div>
+    
   </div>
 </div>
+
+
 
 

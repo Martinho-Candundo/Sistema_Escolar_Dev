@@ -1,1 +1,41 @@
-<h5>Relatório</h5>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <form [formGroup]="formNota" (ngSubmit)="dadoAluno()">
+                <div class="formGroup">
+                    <label for="">Nome</label>
+                    <input class="form-control" type="text" name="nome" id="nome" formControlName="nome">
+                </div>
+                <div class="formGroup">
+                    <label for="">Curso</label>
+                    <input class="form-control" type="text" name="curso" id="curso" formControlName="curso">
+                </div>
+                <div class="formGroup">
+                    <label for="">Classe</label>
+                    <input class="form-control" type="text" name="class" id="class" formControlName="class">
+                </div>
+                <div class="formGroup">
+                    <label for="">1ª Avaliação</label>
+                    <input class="form-control" type="text" name="avalicao_1" id="avalicao_1" formControlName="avalicao_1">
+                </div>
+                <div class="formGroup">
+                    <label for="">2ª Avaliação</label>
+                    <input class="form-control" type="text" name="avalicao_2" id="avalicao_2" formControlName="avalicao_2">
+                </div>
+                <div class="formGroup">
+                    <label for="">Exame 1º trimestre</label>
+                    <input class="form-control" type="text" name="exame" id="exame" formControlName="exame">
+                </div>
+                <div class="formGroup">
+                    <label for="">Resultado</label>
+                    <input class="form-control" type="text" name="apto" id="apto" formControlName="apto">
+                </div>
+                <div>
+                    <button type="submit" [disabled]="!botaoForm()" class="bg-info botao">Inserir Nota Aluno</button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+ 
+</div>

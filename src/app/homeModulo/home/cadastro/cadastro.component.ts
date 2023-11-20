@@ -14,9 +14,9 @@ export class CadastroComponent implements OnInit {
   aluno: Aluno;
   novoDado:any;
   
-
   constructor(private fbuilder: FormBuilder, private adicionarNovo: GeralService) { }
   
+  //Metodo para enviar dados no Banco(POST)
   adicionar(dados:any){    
     this.adicionarNovo.adicionarDado(dados).subscribe((dadoNews)=>{
       this.novoDado = dadoNews;

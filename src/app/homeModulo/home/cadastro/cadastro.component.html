@@ -1,65 +1,72 @@
 <div class="container ma-botm">
   <div class="row">
-    <div class="col-md-3"></div>
-    <div class="col-md-6">
+    <div class="col-md-12">
       <div class="meuCadastro">
         <h4>CADASTRAR NOVO ALUNO</h4>
       </div>
+    </div>
+  </div>
+  
+    
       <form [formGroup]="cadastrar" (ngSubmit)="cadastrarAluno()">
-        <div class="formGroup">
-          <label for="nome" class="lab">Nome:</label>
-          <input type="text" class="form-control" placeholder="Digite o nome" name="nome" id="nome" formControlName="nome">
-          <span *ngIf="cadastrar.get('nome').errors && (cadastrar.get('nome').dirty || cadastrar.get('nome').touched)">
-            <p class="obrigatorio">Nome Obrigatório</p>
-          </span>
+        <div class="row form-marg">
+          <div class="formGroup col-md-4">
+            <label for="nome" class="lab">Nome:</label>
+            <input type="text" class="form-control" placeholder="Digite o nome" name="nome" id="nome" formControlName="nome">
+            <span *ngIf="cadastrar.get('nome').errors && (cadastrar.get('nome').dirty || cadastrar.get('nome').touched)">
+              <p class="obrigatorio">Nome Obrigatório</p>
+            </span>
+          </div>
+          <div class="formGroup col-md-3">
+            <label for="email" class="lab">Data Nasc:</label>
+            <input type="date" class="form-control" placeholder="Digite a Data Nascimento" name="data_nasc" id="data_nasc" formControlName="data_nasc">
+            <span *ngIf="cadastrar.get('data_nasc').errors && (cadastrar.get('data_nasc').dirty || cadastrar.get('data_nasc').touched)">
+              <p class="obrigatorio">Data Nascimento Obrigatório</p>
+            </span>
+          </div>
+          <div class="formGroup col-md-3">
+            <label for="telefone" class="lab">Telefone:</label>
+            <input type="tel" class="form-control" placeholder="telefone" name="telefone" id="telefone" formControlName="telefone">
+            <span *ngIf="cadastrar.get('telefone').errors && (cadastrar.get('telefone').dirty || cadastrar.get('telefone').touched)">
+              <p class="obrigatorio">Telefone Obrigatório</p>
+            </span>
+          </div>
+          <div class="formGroup col-md-2">
+            <label for="nome" class="lab">Turma:</label>
+            <input type="text" class="form-control" placeholder="Digite a turma" name="turma" id="turma" formControlName="turma">
+            <span *ngIf="cadastrar.get('turma').errors && (cadastrar.get('turma').dirty || cadastrar.get('turma').touched)">
+              <p class="obrigatorio">Turma Obrigatório</p>
+            </span>
+          </div>
         </div>
-        <div class="formGroup">
-          <label for="email" class="lab">Data Nasc:</label>
-          <input type="date" class="form-control" placeholder="Digite a Data Nascimento" name="data_nasc" id="data_nasc" formControlName="data_nasc">
-          <span *ngIf="cadastrar.get('data_nasc').errors && (cadastrar.get('data_nasc').dirty || cadastrar.get('data_nasc').touched)">
-            <p class="obrigatorio">Data Nascimento Obrigatório</p>
-          </span>
+        <div class="row">
+          <div class="formGroup col-md-2">
+            <label for="classe" class="lab">Classe:</label>
+            <input type="text" class="form-control" placeholder="Digite a classe" name="class" id="class" formControlName="class">
+            <span *ngIf="cadastrar.get('class').errors && (cadastrar.get('class').dirty || cadastrar.get('class').touched)">
+              <p class="obrigatorio">Classe Obrigatório</p>
+            </span>
+          </div>
+          <div class="formGroup col-md-7">
+            <label for="periodo" class="lab">Curso:</label>
+            <input type="text" class="form-control" name="curso" id="curso" formControlName="curso">
+            <span *ngIf="cadastrar.get('curso').errors && (cadastrar.get('curso').dirty || cadastrar.get('curso').touched)">
+              <p class="obrigatorio">Curso Obrigatório</p>
+            </span>
+          </div>
+          <div class="formGroup col-md-3">
+            <label for="periodo" class="lab">Data Matrícula:</label>
+            <input type="date" class="form-control" name="data_matricula" id="data_matricula" formControlName="data_matricula">
+            <span *ngIf="cadastrar.get('data_matricula').errors && (cadastrar.get('data_matricula').dirty || cadastrar.get('data_matricula').touched)">
+              <p class="obrigatorio">Data Matrícula Obrigatório</p>
+            </span>
+          </div>
         </div>
-        <div class="formGroup">
-          <label for="telefone" class="lab">Telefone:</label>
-          <input type="tel" class="form-control" placeholder="Digite o telefone" name="telefone" id="telefone" formControlName="telefone">
-          <span *ngIf="cadastrar.get('telefone').errors && (cadastrar.get('telefone').dirty || cadastrar.get('telefone').touched)">
-            <p class="obrigatorio">Telefone Obrigatório</p>
-          </span>
-        </div>
-        <div class="formGroup">
-          <label for="nome" class="lab">Turma:</label>
-          <input type="text" class="form-control" placeholder="Digite a turma" name="turma" id="turma" formControlName="turma">
-          <span *ngIf="cadastrar.get('turma').errors && (cadastrar.get('turma').dirty || cadastrar.get('turma').touched)">
-            <p class="obrigatorio">Turma Obrigatório</p>
-          </span>
-        </div>
-        <div class="formGroup">
-          <label for="classe" class="lab">Classe:</label>
-          <input type="text" class="form-control" placeholder="Digite a classe" name="class" id="class" formControlName="class">
-          <span *ngIf="cadastrar.get('class').errors && (cadastrar.get('class').dirty || cadastrar.get('class').touched)">
-            <p class="obrigatorio">Classe Obrigatório</p>
-          </span>
-        </div>
-        <div class="formGroup">
-          <label for="periodo" class="lab">Curso:</label>
-          <input type="text" class="form-control" name="curso" id="curso" formControlName="curso">
-          <span *ngIf="cadastrar.get('curso').errors && (cadastrar.get('curso').dirty || cadastrar.get('curso').touched)">
-            <p class="obrigatorio">Curso Obrigatório</p>
-          </span>
-        </div>
-        <div class="formGroup">
-          <label for="periodo" class="lab">Data Matrícula:</label>
-          <input type="date" class="form-control" name="data_matricula" id="data_matricula" formControlName="data_matricula">
-          <span *ngIf="cadastrar.get('data_matricula').errors && (cadastrar.get('data_matricula').dirty || cadastrar.get('data_matricula').touched)">
-            <p class="obrigatorio">Data Matrícula Obrigatório</p>
-          </span>
-        </div>
-        
         <button type="submit" class="bg-info botao">Cadastrar</button>
 
       </form>
-    </div>
-    <div class="col-md-3"></div>
-  </div>
+    
+   
+  
 </div>
+

@@ -11,6 +11,8 @@ import { RegistroAlunoModule } from './registro-aluno/registro-aluno.module';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { RelatorioComponent } from './relatorio/relatorio.component';
 import { AlunoMatriculaComponent } from './aluno-matricula/aluno-matricula.component';
+import { RegistroNotasComponent } from './registro-notas/registro-notas.component';
+import { PropinaAlunoComponent } from './propina-aluno/propina-aluno.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { AlunoMatriculaComponent } from './aluno-matricula/aluno-matricula.compo
     HomeComponent,
     CadastroComponent,
     RelatorioComponent,
-    AlunoMatriculaComponent],
+    AlunoMatriculaComponent,
+    RegistroNotasComponent,
+    PropinaAlunoComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,
@@ -26,7 +30,6 @@ import { AlunoMatriculaComponent } from './aluno-matricula/aluno-matricula.compo
     FormsModule,
     ReactiveFormsModule,
     ModulologinModule,
-    RegistroAlunoModule
   ],
 })
 export class HomeModule { }
